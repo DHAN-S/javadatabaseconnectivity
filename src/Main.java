@@ -6,7 +6,7 @@ public class Main {
         Scanner scan = new Scanner(System.in);
         CreateConnection connectionobject = new CreateConnection();
         if (connectionobject.connect() == true) {
-            System.out.println("connection done");
+            System.out.println("connection done!!");
             outer:
             {
                 while (true) {
