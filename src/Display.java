@@ -3,7 +3,7 @@ import java.sql.ResultSetMetaData;
 import java.sql.Statement;
 class Display {
     static void choice() {
-        System.out.println("enter your option:\n1.show all data:\n2.insert data:\n3.search by S.NO\n4.truncate table\n5.exit");
+        System.out.println("enter your option:\n1.show all data:\n2.insert data:\n3.search by S.NO\n4.truncate table\n5.update\n6.exit");
     }
     public void display(String query, CreateConnection object) throws Exception {
         ResultSet rs = object.st.executeQuery(query);

@@ -1,11 +1,12 @@
 import java.sql.*;
 import java.util.Scanner;
+
 public class Main {
     static long second = System.currentTimeMillis();
     public static void main(String[] args) throws Exception {
         Scanner scan = new Scanner(System.in);
         CreateConnection connectionobject = new CreateConnection();
-        if (connectionobject.connect() == true) {
+        if (connectionobject.connect()== true) {
             System.out.println("connection done!!");
             outer:
             {
@@ -33,8 +34,12 @@ public class Main {
                             truncateobject.truncate(Querry.truncatequerry, connectionobject);
                             break;
                         }
-
                         case 5: {
+                            Update updateobject = new Update();
+                            updateobject.update(Querry.updatequerry, connectionobject);
+                            break;
+                        }
+                        case 6: {
                             break outer;
                         }
                     }

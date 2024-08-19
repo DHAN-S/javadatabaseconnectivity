@@ -19,6 +19,5 @@ class Insert {
         Date date = Date.valueOf(dob);
         pp.setDate(3, date);
         pp.executeUpdate();
-
     }
 }
