@@ -11,8 +11,8 @@ public class TruncateClass  extends Main{
             if (choice == 'Y' || choice == 'y') {
                 for (int i = 0; i < 2; i++) {
                     System.out.print("Enter password:");
-                    int pas = scan.nextInt();
-                    if (pas == Integer.parseInt(object.password)) {
+                    String pas = scan.next();
+                    if (pas.equals(object.password)) {
                         System.out.println("password matched");
                         object.st.executeUpdate(querry);
                         break;
@@ -23,8 +23,8 @@ public class TruncateClass  extends Main{
                     if (attempt == 2) {
                         System.out.println("try after few minutes");
                         Random rand=new Random();
-                        int penaltly=rand.nextInt(10000);
-                        super.second = System.currentTimeMillis()+penaltly;
+                       // int penaltly=rand.nextInt(10000);
+                        super.second = System.currentTimeMillis()+100000;
                         break;
                     }
                 }
@@ -34,7 +34,7 @@ public class TruncateClass  extends Main{
                 System.out.println("ok");
             }
         } else {
-            System.out.println("colling period ");
+            System.out.println("please wait for "+ (super.second-System.currentTimeMillis())/1000+"seconds");
         }
     }
 }

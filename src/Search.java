@@ -8,7 +8,7 @@ public class Search {
     void search(String querry,CreateConnection object)throws Exception {
         System.out.println("enter the s.no whose full details you want :");
         int num = scan.nextInt();
-        querry = String.format("select *from demo where S_NO=%d", num);
+        querry = String.format("select *from dhanush where id=%d", num);
         ResultSet rs = object.st.executeQuery(querry);
         ResultSetMetaData rr = rs.getMetaData();
         while (rs.next()) {

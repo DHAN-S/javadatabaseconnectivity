@@ -3,10 +3,11 @@ import java.util.Scanner;
 
 public class Main {
     static long second = System.currentTimeMillis();
+
     public static void main(String[] args) throws Exception {
         Scanner scan = new Scanner(System.in);
         CreateConnection connectionobject = new CreateConnection();
-        if (connectionobject.connect()== true) {
+        if (connectionobject.connect() == true) {
             System.out.println("connection done!!");
             outer:
             {
@@ -41,6 +42,10 @@ public class Main {
                         }
                         case 6: {
                             break outer;
+                        }
+                        default:{
+                            System.out.print("please enter valid number");
+                            break;
                         }
                     }
                 }
