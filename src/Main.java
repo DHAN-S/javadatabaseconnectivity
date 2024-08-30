@@ -1,9 +1,7 @@
 import java.sql.*;
 import java.util.Scanner;
-
 public class Main {
     static long second = System.currentTimeMillis();
-
     public static void main(String[] args) throws Exception {
         Scanner scan = new Scanner(System.in);
         CreateConnection connectionobject = new CreateConnection();
@@ -53,6 +51,5 @@ public class Main {
             connectionobject.con.close();
             connectionobject.st.close();
         }
-
     }
 }
