@@ -38,7 +38,12 @@ public class Main {
                             updateobject.update(Querry.updatequerry, connectionobject);
                             break;
                         }
-                        case 6: {
+                        case 6:{
+                            Delete deleteobject=new Delete();
+                            deleteobject.delete(Querry.deletequerry,connectionobject);
+                            break;
+                        }
+                        case 7: {
                             break outer;
                         }
                         default:{
