@@ -33,17 +33,22 @@ public class Main {
                             truncateobject.truncate(Querry.truncatequerry, connectionobject);
                             break;
                         }
-                        case 5: {
+                        case 5:
+                        {  DropClass dropobject = new DropClass();
+                            dropobject.drop(Querry.dropquerry,connectionobject);
+                            break;
+                        }
+                        case 6: {
                             Update updateobject = new Update();
                             updateobject.update(Querry.updatequerry, connectionobject);
                             break;
                         }
-                        case 6:{
+                        case 7:{
                             Delete deleteobject=new Delete();
                             deleteobject.delete(Querry.deletequerry,connectionobject);
                             break;
                         }
-                        case 7: {
+                        case 8: {
                             System.out.println("If you want modify all these things happen in this connection(Y/N) :");
                              if(scan.next().charAt(0)=='Y')
                                  connectionobject.con.commit();

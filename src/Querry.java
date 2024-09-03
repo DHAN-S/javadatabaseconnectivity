@@ -5,5 +5,6 @@ public class Querry {
     static String truncatequerry = "TRUNCATE table dhanush";
     static String updatequerry="update dhanush set Name=? where Name =? ";
     static String deletequerry="delete from dhanush where id=?";
+    static String dropquerry="DROP table dhanush";
 
 }

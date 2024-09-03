@@ -1,11 +1,11 @@
 import java.util.Random;
 import java.util.Scanner;
-public class TruncateClass  extends Main{
+public class DropClass  extends Main{
     Scanner scan=new Scanner(System.in);
-    void truncate(String querry,CreateConnection object)throws Exception
+    void drop(String querry,CreateConnection object)throws Exception
     {
         if (System.currentTimeMillis() > super.second) {
-            System.out.println("ARE YOU SURE WANT TO TRUNCATE:(Y/N)");
+            System.out.println("ARE YOU SURE WANT TO Drop:(Y/N)");
             char choice = scan.next().charAt(0);
             int attempt = 0;
             if (choice == 'Y' || choice == 'y') {
