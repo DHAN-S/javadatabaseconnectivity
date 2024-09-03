@@ -1,23 +1,25 @@
+
+import io.github.cdimascio.dotenv.Dotenv;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.Statement;
  class CreateConnection {
-     Environmentclass variable=new Environmentclass();
-     String url =variable.MYSQL_ADDON_URI ;
-     String username = variable.MYSQL_ADDON_USER;
-     String password =variable.MYSQL_ADDON_PASSWORD;
+     Dotenv envVariable = Dotenv.load();
+    String url ="jdbc:mysql://uqdlrxcgcohqaufg:A3wHVAkC7w43K7mjV0Vv@bey0m7sl1icdq1kj3hoc-mysql.services.clever-cloud.com:3306/bey0m7sl1icdq1kj3hoc";
+    String username =envVariable.get("MYSQL_ADDON_USER") ;
+    String password =envVariable.get("MYSQL_ADDON_PASSWORD");
      Connection con=null;
      Statement st=null;
    public boolean connect(){
     try{
      Class.forName("com.mysql.cj.jdbc.Driver");
-    con = DriverManager.getConnection(url, username, password);
+    con = DriverManager.getConnection(url ,username, password);
     st = con.createStatement();
     return true;
-     }
-    catch(Exception e)
+     }    catch(Exception e)
     {
-        System.out.print(e);
+        System.out.print(e.getMessage());
         return false;
     }}
 }

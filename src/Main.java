@@ -44,7 +44,9 @@ public class Main {
                             break;
                         }
                         case 7: {
+                            connectionobject.con.close();
                             break outer;
+
                         }
                         default:{
                             System.out.print("please enter valid number");

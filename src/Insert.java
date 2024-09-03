@@ -10,7 +10,7 @@ class Insert {
         int age=scan.nextInt();
         System.out.print("salary: ");
         int salary=scan.nextInt();
-        System.out.print(" DOB: ");
+        System.out.print("DOB: ");
         String dateobj=scan.next();
         PreparedStatement pp = object.con.prepareStatement(query);
         pp.setString(1, name);

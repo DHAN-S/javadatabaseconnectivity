@@ -2,7 +2,7 @@
 out/
 !**/src/main/**/out/
 !**/src/test/**/out/
-src/Environmentclass.java
+.env
 
 ### Eclipse ###
 .apt_generated
