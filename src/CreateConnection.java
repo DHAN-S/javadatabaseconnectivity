@@ -13,6 +13,7 @@ import java.sql.Statement;
      Class.forName("com.mysql.cj.jdbc.Driver");
     con = DriverManager.getConnection(url);
     st = con.createStatement();
+    con.setAutoCommit(false);
     return true;
      }    catch(Exception e)
     {

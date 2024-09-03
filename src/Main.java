@@ -44,12 +44,14 @@ public class Main {
                             break;
                         }
                         case 7: {
+                            System.out.println("If you want modify all these things happen in this connection(Y/N) :");
+                             if(scan.next().charAt(0)=='Y')
+                                 connectionobject.con.commit();
                             connectionobject.con.close();
                             break outer;
-
                         }
                         default:{
-                            System.out.print("please enter valid number");
+                            System.out.print("please enter valid number!!!!");
                             break;
                         }
                     }

@@ -19,5 +19,6 @@ class Insert {
         pp.setInt(3, salary);
         pp.setString(4, dateobject);
         pp.executeUpdate();
+
     }
 }
