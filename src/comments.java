@@ -15,9 +15,6 @@ String username = "DHANUSH";
 String password = "4751";
  */
 
-
-
-
 /* display
  public void display(String query, CreateConnection object) throws Exception {
         ResultSet rs = object.st.executeQuery(query);

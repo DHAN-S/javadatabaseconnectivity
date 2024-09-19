@@ -50,7 +50,8 @@ public class Main {
                         }
                         case 8: {
                             System.out.println("If you want modify all these things happen in this connection(Y/N) :");
-                             if(scan.next().charAt(0)=='Y')
+                            char p= scan.next().charAt(0);
+                            if(p=='Y'||p=='y')
                                  connectionobject.con.commit();
                             connectionobject.con.close();
                             break outer;
